@@ -1,0 +1,45 @@
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: beige;
+}
+
+header h2{
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+header{
+    padding: 15px 100%;
+    background-color: rgb(36, 115, 129);
+}
+
+.exp{
+    font-size: 20px;
+    height: auto;
+}
+.circle{
+    padding-right: 63px;
+    font-size: 20px;
+}
+.square{
+    padding-right: 70px;
+    font-size: 20px;
+}
+.prime{
+    padding-right: 93px;
+    font-size: 19px;
+}
+
+.dimension{
+    margin: 10px;
+    /* letter-spacing: 2px; */
+}

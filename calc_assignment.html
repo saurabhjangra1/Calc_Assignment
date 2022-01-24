@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+    <header>
+        <h2>Calculator</h2>
+    </header>
+
+</head>
+<body>
+    <br>
+    <div class="exp dimension">
+        <label for="exp">Result: </label>
+        <input type="text" name="exp" id="exp" placeholder="Enter Expression">
+        <button type="submit"onclick="result();">Calculate</button>
+        <button type="reset" onclick="reset1();">Reset</button>
+
+    </div>
+    <div class="circle dimension">
+        <label for="radius">Area of Circle: </label>
+        <input type="text" name="radius" id="radius" placeholder="Enter Radius">
+        <button type="submit" onclick="areaOfCircle();">Calculate</button>
+        <button type="reset" onclick="reset2();">Reset</button>
+    </div>
+    <div class="square dimension">
+        <label for="side">Area of Square: </label>
+        <input type="text" name="side" id="side" placeholder="Enter Side">
+        <button type="submit" onclick="areaOfSquare();">Calculate</button>
+        <button type="reset" onclick="reset3();">Reset</button>
+    </div>
+    <div class="prime dimension">
+        <label for="num">N<sup>th</sup> Prime Number:</label>
+        <input type="number" name="num" id="num" placeholder="Enter n">
+        <button type="submit" onclick="nthPrime();">Calculate</button>
+        <button type="reset" onclick="reset4();">Reset</button>
+    </div>
+
+    <script type="text/javascript">
+
+        
+        function result(){
+            document.getElementById("exp").value = eval(document.getElementById("exp").value);
+        }
+        function areaOfCircle(){
+            let rad = document.getElementById("radius").value;
+            document.getElementById("radius").value = eval(3.14*rad*rad).toFixed(2);
+        }
+        function areaOfSquare(){
+            let side = document.getElementById("side").value;
+            document.getElementById("side").value = eval(side**2).toFixed(2);
+        }
+        function nthPrime(){
+            let n = document.getElementById("num").value;
+            let count = 0;
+            let flag = true;
+            let i = 2;
+            while(true){
+                for(let j = 2; j<i; j++){
+                    if(i%j==0){
+                        flag = false;
+                        break;
+                    }
+                    else flag =true;
+                }
+                if(flag==true) count++;
+                if(count==n) break;
+                i++;
+            }
+            document.getElementById("num").value = i;
+        }
+        function reset1(){
+            document.getElementById("exp").value = '';
+        }
+        function reset2(){
+            document.getElementById("radius").value = '';
+        }
+        function reset3(){
+            document.getElementById("side").value = '';
+        }
+        function reset4(){
+            document.getElementById("num").value = '';
+        }
+    </script>
+</body>
+</html>
+
